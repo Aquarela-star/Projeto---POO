@@ -1,19 +1,17 @@
-import cliente.Cliente;
-import cliente.PessoaFisica;
-import cliente.PessoaJuridica;
+import cliente.*;
 
-class Main {
+public class TesteCliente {
     public static void main(String[] args) {
         // Teste de pessoa fisica
         PessoaFisica pf = new PessoaFisica(1, "Gustavo Candido", "gustavo@email.com", 123456789);
         pf.criarConta();
-        pf.registrarEndereco("Rua A, 123 - Patos de Minas/MG");
+        pf.registrarEndereco("Rua das Flores, 123 - Patos de Minas/MG");
         System.out.println("------------------------------");
 
         // Teste de pessoa juridica
         PessoaJuridica pj = new PessoaJuridica(2, "Loja Exemplo LTDA", "contato@loja.com", 12345678);
         pj.criarConta();
-        pj.registrarEndereco("Rua B, 456 - Patos de Minas/MG");
+        pj.registrarEndereco("Av. Central, 456 - Patos de Minas/MG");
         System.out.println("------------------------------");
 
         //Polimorfismo
