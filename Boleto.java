@@ -1,5 +1,3 @@
-package Pagamentos;
-
 public class Boleto extends Pagamento {
     public Boleto(double valorOriginal) {
         super(valorOriginal);

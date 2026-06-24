@@ -1,5 +1,3 @@
-package Pagamentos;
-
 public class Pix extends Pagamento {
 
     public Pix(double valorOriginal) {

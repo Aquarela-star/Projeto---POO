@@ -1,5 +1,3 @@
-package Pagamentos;
-
 public abstract class Pagamento {
     protected double valorOriginal;
 
