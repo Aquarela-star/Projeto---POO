@@ -1,3 +1,4 @@
+import Pagamento;
 import java.util.ArrayList;
 
 public class main {
