@@ -3,7 +3,7 @@ package atendimento;
 
 import java.util.ArrayList;
 
-
+import Cadastro.Cliente;
 public class AtendenteVirtual {
 
     private ArrayList<Cliente> clientes;
