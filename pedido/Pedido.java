@@ -2,19 +2,24 @@ package pedido;
 
 import java.util.ArrayList;
 import produto.Produto;
+import cadastro.Cliente; 
 import java.util.List;
+import pedido.NotaFiscal;
+import entrega.Entrega;
 
 public class Pedido {
     private int numeroPedido;
-    private String cliente;
+    private Cliente cliente;
     private List<Produto> produtos;
     private double totalPedido;
+    private Entrega entrega;
     
-    public Pedido(int numeroPedido, String cliente) {
+    public Pedido(int numeroPedido, Cliente cliente, Entrega entrega) {
         this.numeroPedido = numeroPedido;
         this.cliente = cliente;
         this.produtos = new ArrayList<>();
         this.totalPedido = 0.0;
+        this.entrega = entrega;
     }
     
     public void adicionarProduto(Produto produto) {
@@ -42,12 +47,13 @@ public class Pedido {
         );
         return notaFiscal;
     }
+
     
     public int getNumeroPedido() {
         return numeroPedido;
     }
     
-    public String getCliente() {
+    public Cliente getCliente() {
         return cliente;
     }
     
