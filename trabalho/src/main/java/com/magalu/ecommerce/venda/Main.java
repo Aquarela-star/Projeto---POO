@@ -8,9 +8,8 @@ import com.magalu.ecommerce.venda.pagamento.Debito;
 import com.magalu.ecommerce.venda.pagamento.Pagamento;
 import com.magalu.ecommerce.venda.pagamento.Pix;
 import com.magalu.ecommerce.venda.produto.Produto;
-import com.magalu.ecommerce.venda.cadastro.Cliente;
-import com.magalu.ecommerce.venda.cadastro.Juridica;
 import com.magalu.ecommerce.venda.entrega.*;
+import com.magalu.ecommerce.venda.atendimento.AtendenteVirtual;
 import com.magalu.ecommerce.venda.cadastro.*;
 
 public class Main {
@@ -63,6 +62,19 @@ public class Main {
         Cliente[] clientes = { pf, pj };
         for (Cliente c : clientes) {
             System.out.println(c.getNome() + " -> " + c.getDocumento());
+        }
+
+        System.out.println("------------------------------");
+
+        AtendenteVirtual atendente = new AtendenteVirtual("ChatBot Magalu");
+
+        pf.falarComAtendente(atendente);
+        pj.falarComAtendente(atendente);
+
+        System.out.println("\nClientes atendidos:");
+
+        for (Cliente c : atendente.getClientes()) {
+            System.out.println(c.getNome());
         }
     }
 }

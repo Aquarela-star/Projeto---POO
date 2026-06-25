@@ -43,12 +43,11 @@ public abstract class Cliente {
         System.out.println("Produto adicionado ao carrinho.");
     }
 
-   public void falarComAtendente(AtendenteVirtual atendente) {
+    public void falarComAtendente(AtendenteVirtual atendente) {
     this.atendenteVirtual = atendente;
     atendente.adicionarCliente(this);
-
-    System.out.println(this.nome + " está em contato com o atendente " + atendente.getNome());
-}
+    }
+   
 
     public String getNome() {
         return nome;
