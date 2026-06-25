@@ -2,6 +2,9 @@ package cliente;
 
 import java.util.ArrayList;
 
+import Pedidos.Pedido;
+import atendimento.AtendenteVirtual;
+
 public abstract class Cliente {
 
     private String nome;
@@ -47,10 +50,12 @@ public abstract class Cliente {
         System.out.println("Produto adicionado ao carrinho.");
     }
 
-    public void falarComAtendente(AtendenteVirtual atendente) {
-        this.atendenteVirtual = atendente;
-        System.out.println(this.nome + " está em contato com o atendente " + atendente.getNome());
-    }
+   public void falarComAtendente(AtendenteVirtual atendente) {
+    this.atendenteVirtual = atendente;
+    atendente.adicionarCliente(this);
+
+    System.out.println(this.nome + " está em contato com o atendente " + atendente.getNome());
+}
 
     // ===== Getters e Setters =====
 
